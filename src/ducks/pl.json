@@ -1,0 +1,137 @@
+{
+    "App" : {
+        "Navbar" : {
+            "main": "Strona główna",
+            "movies": "Filmy",
+            "actors" : "Aktorzy",
+            "persons" : "Osoby",
+            "form": "Formularze",
+            "language": {
+                "language": "Wybierz język",
+                "polish": "polski",
+                "english": "angielski"
+            }
+        }
+
+    },
+    "Dashboard" : {
+        "new_movies": "Nowe filmy"
+    },
+    "Form":{
+        "add_movie": "Dodaj Film",
+        "add_person": "Dodaj Osobę",
+        "add_actor": "Dodaj Aktora",
+        "edit_movie": "Edytuj Film",
+        "edit_person": "Edytuj Osobę",
+        "title": "tytuł",
+        "movie_title": "tytuł filmu",
+        "genre": "gatunek",
+        "genres":{
+            "fabular": "Film obyczajowy",
+            "action": "Film akcji",
+            "animation": "Film animowany",
+            "biography": "Film biograficzny",
+            "children": "Film dla dzieci",
+            "documentary": "Dokument",
+            "drama": "Dramat",
+            "erotic": "Film erotyczny",
+            "family": "Film familijny",
+            "fantastic": "Fantastyka",
+            "fantasy": "Fantasy",
+            "horror": "Horror",
+            "sf": "Science fiction",
+            "historic": "Film historyczny",
+            "costium": "Film kostiumowy",
+            "catastrophic": "Film katastroficzny",
+            "comedy": "Komedia",
+            "dark_comedy": "Czarna komedia",
+            "romcom": "Komedia romantyczna",
+            "drama_comedy": "Komediodramat",
+            "parody": "Parodia",
+            "criminal": "Kryminał",
+            "gangsta": "Film gangsterski",
+            "spy": "Film szpiegowski",
+            "musical": "Film muzyczny",
+            "polit": "Film polityczny"
+        },
+        "release_date": "data premiery",
+        "description": "opis",
+        "movie_image_url": "link do plakatu",
+        "director_id": "reżyser",
+        "first_name": "imię",
+        "last_name": "nazwisko",
+        "birth_date": "data urodzenia",
+        "person_image_url": "link do zdjęcia",
+        "nationality": "narodowość",
+        "actor": "aktor",
+        "submit": "zatwierdź",
+        "add_director": "Jeśli na liście nie ma reżysera twojego filmu, dodaj go powżyej.",
+        "thanks_add_movie": "Dziękujemy za dodanie filmu",
+        "thanks_update_movie": "Dziękujemy za edycję filmu",
+        "thanks_add_person": "Dziękujemy za dodanie osoby",
+        "thanks_update_person": "Dziękujemy za edycję osoby",
+        "thanks_add_actor": "Dziękujemy za dodanie aktora",
+        "thanks_update_actor": "Dziękujemy za edycję aktora",
+        "wrong_title": "Podany tytuł już istnieje",
+        "edit": "Edytuj",
+        "cancle": "powrót",
+        "validate": "wymagane",
+        "cancle_filtr": "resetuj",
+        "submit_filtr": "filtruj",
+        "error": "Podany tutuł już istnieje"
+    },
+    "Movies" : {
+        "director": "Reżyser",
+        "release_date": "Data premiery",
+        "description": "Opis",
+        "genre": "Gatunek",
+        "no_movies": "Brak filmów o wybranych kryteriach",
+        "Sort":{
+            "sort": "Sortowanie",
+            "default": "domyślnie",
+            "release_date": "data premiery",
+            "title": "tytuł",
+            "director": "reżyser alfabetycznie",
+            "genre": "gatunek alfabetycznie"
+        },
+        "Filtr": {
+            "filtr": "Filtrowanie",
+            "director": "reżyserzy",
+            "genre": "gatunki",
+            "data": "data premiery",
+            "from": "od",
+            "to": "do"
+        },
+        "number_of_movies": "Filmów na stronie",
+        "delete_movie": "Film został usunięty"
+    },
+    "Persons" : {
+        "birth_date": "Data urodzenia",
+        "nationality": "Narodowość",
+        "Sort":{
+            "sort": "Sortowanie",
+            "default": "domyślnie",
+            "first_name": "imię alfabetycznie",
+            "last_name": "nazwisko alfabetycznie",
+            "birth_date": "data urodzenia",
+            "nationality": "narodowość"
+        },
+        "number_of_persons": "Osób na stronie",
+        "directed_movies": "Wyreżyserowane filmy",
+        "delete": "Usuń",
+        "delete_person": "Osoba została usunięta",
+        "no_persons": "Brak osób o wybranych kryteriach",
+        "Filtr": {
+            "filtr": "Filtrowanie",
+            "nationality": "narodowość",
+            "movies": "ilość wyreżyserowanych filmów",
+            "birth_date": "data urodzenia",
+            "from": "od",
+            "to": "do"
+        }
+    },
+    "Error":{
+        "500": "Przepraszamy, błąd serwera",
+        "404": "Strony nie znaleziono"
+    }
+}

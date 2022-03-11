@@ -1,0 +1,66 @@
+[
+    {
+      "id": 3,
+      "first_name": "Daniel",
+      "last_name": "Olbrychski",
+      "birth_date": "1945-02-24T23:00:00.000Z",
+      "image_url": "https://i.wpimg.pl/O/424x660/d.wpimg.pl/208544107-1435651048/2_PAP.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 7,
+      "first_name": "Andrzej",
+      "last_name": "Wajda",
+      "birth_date": "1926-03-03T23:00:00.000Z",
+      "image_url": "https://suchoty.files.wordpress.com/2017/07/000603ef4nwl8gia-c322-f41.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 8,
+      "first_name": "Zbigniew",
+      "last_name": "Cybulski",
+      "birth_date": "1927-11-01T23:00:00.000Z",
+      "image_url": "https://encyklopediateatru.pl/e-teatr/zdjecia/biogramy/c/cybulskizbigniew.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 4,
+      "first_name": "Janusz",
+      "last_name": "Morgenstern",
+      "birth_date": "1922-11-08T23:00:00.000Z",
+      "image_url": "https://img1.onebid.pl/img/646/101625_1b.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 6,
+      "first_name": "Stanisław",
+      "last_name": "Bareja",
+      "birth_date": "1929-12-01T23:00:00.000Z",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BZGVhMjA3ZTEtYmQxYS00ZDM4LWEzMmQtMGJiZmRhMzMwMzNjXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 2,
+      "first_name": "Jerzy",
+      "last_name": "Sztur",
+      "birth_date": "1947-04-15T23:00:00.000Z",
+      "image_url": "https://akademiapolskiegofilmu.pl/cache/images/resize_1000x1000/files/PL/Historia_Polskiego_Filmu/AKTORZY/Stuhr_Jerzy/1-F-1811-1-800x800.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 5,
+      "first_name": "Kalina",
+      "last_name": "Jędrusik",
+      "birth_date": "1931-02-04T23:00:00.000Z",
+      "image_url": "https://e-teatr.pl/files/multimedias/53094/thumb_jedrusik-odwiedziny.jpg",
+      "nationality": "polska"
+    },
+    {
+      "id": 1,
+      "first_name": "Juliusz",
+      "last_name": "Machulski",
+      "birth_date": "1955-02-18T23:00:00.000Z",
+      "image_url": "https://akademiapolskiegofilmu.pl/cache/images/resize_1000x1000/files/PL/Historia_Polskiego_Filmu/REZYSERZY/Machulski_Juliusz/1-P-88-3-800x800.jpg",
+      "nationality": "polska"
+    }
+  ]

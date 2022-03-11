@@ -1,0 +1,70 @@
+$dark_brown: #201205;
+$yellow: #FFE300;
+$orange: #FF7800;
+$peach: #FFBC97;
+$brigth: #F7F7F7;
+
+@font-face{
+    font-family: Magiel-Black;
+    src: url('./../fonts/Magiel-Black.ttf'),
+         url('./../fonts/Magiel-Black.otf');}  
+
+.forms{
+    #col{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .content{
+        position: relative;
+        align-content: center;
+        align-self: center;
+        justify-self: center;
+    }
+    @media (min-width: 1100px){
+        display: flex;
+        flex-direction: row;
+    }
+    @media (max-width: 1100px){
+        display: flex;
+        flex-direction: column-reverse;
+        // width: 80%;
+    }
+}
+.form{
+    width: 400px;
+    align-self:center;
+    .Form{
+        #pole{
+            margin: 5px;
+            padding: 5px;
+            width: calc(400px - 40%);
+        }
+        button{
+            color: $brigth;
+            font-family: Magiel-Black;
+            background-color: $orange;
+            cursor: pointer;
+            border: none;
+            font-size: large;
+            border-radius: 5px;
+            Link{
+                color: $brigth;
+            }
+        }
+        button:hover{
+            text-shadow: 2px 2px $dark_brown;
+        }
+        .valid_error{
+            font-size: medium;
+            color: $orange;
+            align-self: center;
+        }
+    }
+    .cancle{
+        color: $brigth;
+    }
+}
+
+#add_director{
+    font-size: large;
+}

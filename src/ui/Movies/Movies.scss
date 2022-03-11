@@ -1,0 +1,109 @@
+$dark_brown: #201205;
+$yellow: #FFE300;
+$orange: #FF7800;
+$peach: #FFBC97;
+$brigth: #F7F7F7;
+
+@font-face{
+    font-family: Magiel-Black;
+    src: url('./../fonts/Magiel-Black.ttf'),
+         url('./../fonts/Magiel-Black.otf');}    
+
+.movie{
+    margin-right: 20px;
+}
+
+.content_2{
+    margin-bottom: 10px;
+    background-color: $peach;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px  $orange;
+    -o-box-shadow: $orange;
+    button{border: none; border-radius: 3px;}
+    .checked{
+        background-color: $dark_brown;
+        color: $brigth;
+        margin: 3px;
+    }
+    .unchecked{
+        background-color: $brigth;
+        margin: 3px;
+    }
+    #pole{
+        margin-bottom: 5px;
+    }
+    .filtr_button{
+        background-color: $orange;
+        color: $brigth;
+    }
+}
+.title{
+    font-family: Magiel-Black;
+    color: $orange;
+}
+#dsc{
+    margin: 5px;
+}
+.movie_info{
+    writing-mode: vertical-rl;
+    text-orientation:sideways;
+    height: 200px;
+    #director{
+        color: $peach;
+    }
+}
+#movie_pod:hover{
+    .title{text-shadow: 2px 3px $brigth;}
+    #director{
+        margin: 0px;
+        color: $dark_brown;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+}
+.poster{
+    height: 200px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.filtr_button{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.error{
+    font-family: Magiel-Black;
+    font-size: 160%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('../../ducks/footer.jpeg');
+    color: transparent;
+    -webkit-text-stroke: 2px $brigth;
+    text-align: center;
+}
+.Movies{
+    @media (max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }

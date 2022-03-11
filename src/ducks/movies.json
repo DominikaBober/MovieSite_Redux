@@ -1,0 +1,74 @@
+[
+    {
+      "id": 2,
+      "title": "Vabank",
+      "genre": "comedy",
+      "release_date": "1981-09-28T23:00:00.000Z",
+      "description": "Debiut fabularny Juliusza Machulskiego. Film łączy elementy czystego kryminału spod znaku Alfreda Hitchcocka ze stylizacją retro. Akcja toczy się w scenerii warszawskiej w latach trzydziestych. Doświadczony kasiarz Kwinto (Jan Machulski) opuszcza właśnie więzienie i obmyśla zemstę na Kramerze (Leonard Pietraszak), właścicielu banku, który przed laty namówił go na włamanie, a następnie zadenuncjował policji.",
+      "image_url": "https://www.poster.pl/posters/pagowski_andrzej_vabank.jpg",
+      "director_id": 1
+    },
+    {
+      "id": 3,
+      "title": "Trzeba zabić tę miłość",
+      "genre": "drama",
+      "release_date": "1972-12-08T23:00:00.000Z",
+      "description": "Magda i Andrzej nie dostaje się na studia z powodu zbyt niskiej liczby punktów. Dziewczyna podejmuje pracę salowej w prywatnym szpitalu. Chłopak zatrudnia się w prywatnym warsztacie samochodowym. Oboje się kochają, myślą o wspólnym życiu. Andrzej w tajemnicy przed Magdą zgadza się zostać kochankiem kobiety, która jest żoną jego szefa. Pewnego dnia młody pracownik wykorzystuje okazję i kradnie z mieszkania przełożonego cenną ikonę. Magda dowiaduje się o zdradzie Andrzeja.",
+      "image_url": "https://www.poster.pl/posters/swierzy_trzeba_zabic.jpg",
+      "director_id": 4
+    },
+    {
+      "id": 4,
+      "title": "Jowita",
+      "genre": "drama",
+      "release_date": "1967-10-28T23:00:00.000Z",
+      "description": "Dramat psychologiczno - obyczajowy: historia miłości między utalentowanym lekkoatletą (Daniel Olbrychski), a tajemniczą dziewczyną (Barbara Kwiatkowska). Główny bohater, Marek Arens poznaje na balu przebierańców dziewczynę, której twarz ukryta była pod czarczafem. Oczarowany jej wspaniałymi czarnymi oczami zakochuje się. Jednak nie potrafi jej odnaleźć i wplątuje się w romanse z innymi kobietami cały czas jej poszukując. Żyje marzeniami o wielkiej miłości, kreując siebie w kolejnych nieudanych próbach na kogoś lepszego niż jest w istocie.",
+      "image_url": "https://poster.pl/posters/stachurski_jowita.jpg",
+      "director_id": 4
+    },
+    {
+      "id": 5,
+      "title": "Brunet wieczorową porą",
+      "genre": "dark_comedy",
+      "release_date": "1976-10-16T23:00:00.000Z",
+      "description": "Cyganka przepowiada Michałowi Romanowi (Krzysztof Kowalewski) niezwykłe przeżycia, jednak on nie bierze poważnie tych proroctw. Gdy jego rodzina wyjeżdża na weekend, Michał zabiera się do zaległej pracy. Wtedy zaczynają się spełniać proroctwa Cyganki - Michał znajduje zaginiony zegarek, a w totolotku wylosowane zostają przepowiedziane liczby. Bohater zaczyna oczekiwać najgroźniejszej części przepowiedni - zapowiada ona zabicie bruneta, który zjawi się w jego mieszkaniu wieczorową porą...",
+      "image_url": "https://sto90.pl/content/uploads/2017/04/50x70_brunet_wieczorowa_pora_2.png",
+      "director_id": 6
+    },
+    {
+      "id": 1,
+      "title": "Seksmisja",
+      "genre": "comedy",
+      "release_date": "1984-05-09T22:00:00.000Z",
+      "description": "Dwaj śmiałkowie: Maks (Jerzy Stuhr) i Albert (Olgierd Łukaszewicz), jako ochotnicy dają się na krótki okres zahibernować. Budzą się po przeszło 50 latach, mając nadzieję na sławę i zaszczyty, lecz... Od opiekującej się nimi doktor Lamii dowiadują się, że hibernacja trwała dużo dłużej z powodu wojny, a co gorsza podczas walk zniszczono całkowicie geny męskie. Dzielni - i zarazem jedyni - faceci postanawiają uciec kobietom i przywrócić \"normalny\" porządek świata.",
+      "image_url": "https://polskaszkolaplakatu.pl/userdata/public/gfx/a35e44ef1727f31893c898fb6293841a.jpg",
+      "director_id": 1
+    },
+    {
+      "id": 9,
+      "title": "Dwa żebra Adama",
+      "genre": "comedy",
+      "release_date": "1964-01-22T23:00:00.000Z",
+      "description": "Powracający z zagranicy inżynier zamieszkuje ze swoimi dwiema żonami. Tego faktu nie mogą znieść mieszkańcy miasteczka.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BYjJmM2FlYzktYjZmNy00YmZlLWI4M2YtYTliOGE3OGM3OTQ5XkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR104,0,630,1200_AL_.jpg",
+      "director_id": 4
+    },
+    {
+      "id": 8,
+      "title": "Do widzenia do jutra 2",
+      "genre": "fabular",
+      "release_date": "1960-05-22T22:00:00.000Z",
+      "description": "Artysta Jacek poznaje piękną córkę francuskiego konsula, Margueritte, którą oprowadza po Gdańsku.",
+      "image_url": "https://i.pinimg.com/474x/66/17/22/661722ac4dfe4a2faffb2eeec3546550.jpg",
+      "director_id": 4
+    },
+    {
+      "id": 10,
+      "title": "Małżeństwo z rozsądku",
+      "genre": "musical",
+      "release_date": "1967-07-03T23:00:00.000Z",
+      "description": "Muzyczna komedia obyczajowa o perypetiach dwóch chłopców rywalizujących o dziewczynę, ukazująca dwa przeciwstawne środowiska - cyganerii artystycznej i bazarowych kombinatorów. Joanna, córka handlarza z bazaru Różyckiego, kocha Andrzeja, młodego, zdolnego, lecz ubogiego plastyka starającego się sprzedać swe obrazy pod warszawskim Barbakanem.",
+      "image_url": "https://fwcdn.pl/fpo/76/31/7631/7546499.6.jpg",
+      "director_id": 6
+    }
+]

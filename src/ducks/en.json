@@ -1,0 +1,136 @@
+{
+    "App" : {
+        "Navbar" : {
+            "main": "Home",
+            "movies": "Movies",
+            "actors" : "Actors",
+            "persons" : "Persons",
+            "form": "Forms",
+            "language": {
+                "language": "Choose language",
+                "polish": "polish",
+                "english": "english"
+            }
+        }
+
+    },
+    "Dashboard" : {
+        "new_movies": "New movies"
+    },
+    "Form":{
+        "add_movie": "Add Movie",
+        "add_person": "Add person",
+        "add_actor": "Add Actor",
+        "edit_movie": "Edit Movie",
+        "edit_person": "Edit Person",
+        "title": "title",
+        "movie_title": "movie title",
+        "genre": "genre",
+        "genres":{
+            "fabular": "Fabular movie",
+            "action": "Action movie",
+            "animation": "Animation",
+            "biography": "Bibiographic",
+            "children": "Children movie",
+            "documentary": "Documentary",
+            "drama": "Drama",
+            "erotic": "Erotic movie",
+            "family": "Family movie",
+            "fantasy": "Fantasy",
+            "horror": "Horror",
+            "sf": "Science fiction",
+            "historic": "Historic movie",
+            "costium": "Costium moviey",
+            "catastrophic": "Catastrophic",
+            "comedy": "Comedy",
+            "dark_comedy": "Dark comedy",
+            "romcom": "Romantic comedy",
+            "drama_comedy": "Drama comedy",
+            "parody": "Parody",
+            "criminal": "Criminal",
+            "gangsta": "Gangsta movie",
+            "spy": "Spy movie",
+            "musical": "Musical",
+            "polit": "Politic movie"
+        },
+        "release_date": "realise data",
+        "description": "description",
+        "movie_image_url": "movie image url",
+        "director_id": "director",
+        "first_name": "first name",
+        "last_name": "last name",
+        "birth_date": "birth date",
+        "person_image_url": "person image url",
+        "nationality": "nationality",
+        "actor": "actor",
+        "submit": "submit",
+        "add_director": "If director of your movie is not on the list add them above.",
+        "thanks_add_movie": "Thanks for adding a movie",
+        "thanks_update_movie": "Thanks for editing the movie",
+        "thanks_add_person": "Thanks for adding a person",
+        "thanks_update_person": "Thanks for editing the person",
+        "thanks_add_actor": "Dziękujemy za dodanie aktora",
+        "thanks_update_actor": "Dziękujemy za edycję aktora",
+        "wrong_title": "Title duplicate",
+        "edit": "Edit",
+        "cancle": "cancle",
+        "validate": "required",
+        "cancle_filtr": "reset",
+        "submit_filtr": "filter",
+        "error": "Title duplicate"
+    },
+    "Movies" : {
+        "director": "Director",
+        "release_date": "Realise date",
+        "description": "Description",
+        "genre": "Genre",
+        "no_movies": "No movie matching criterions",
+        "Sort":{
+            "sort": "Sort",
+            "default": "default",
+            "release_date": "release date",
+            "title": "title",
+            "director": "director alfabetic",
+            "genre": "genre alfabetic"
+        },
+        "Filtr": {
+            "filtr": "Filtr",
+            "director": "directors",
+            "genre": "genres",
+            "data": "release date",
+            "from": "from",
+            "to": "to"
+        },
+        "number_of_movies": "Movies on the page",
+        "delete_movie": "Movie was deleted"
+    },
+    "Persons" : {
+        "birth_date": "Birth date",
+        "nationality": "Mationality",
+        "Sort":{
+            "sort": "Sort",
+            "default": "default",
+            "first_name": "first name alfabetic",
+            "last_name": "last name alfabetic",
+            "birth_date": "birth date",
+            "nationality": "nationality"
+        },
+        "number_of_persons": "Persons on the page",
+        "directed_movies": "Directed movies",
+        "delete": "Delete",
+        "delete_person": "Person was deleted",
+        "no_persons": "No person matching criterions",
+        "Filtr": {
+            "filtr": "Filter",
+            "nationality": "nationality",
+            "movies": "number of directed movies",
+            "birth_date": "birth date",
+            "from": "from",
+            "to": "to"
+        }
+    },
+    "Error":{
+        "500": "Sorry server error",
+        "404": "Page not found"
+    }
+}

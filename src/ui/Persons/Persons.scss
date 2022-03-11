@@ -1,0 +1,122 @@
+$dark_brown: #201205;
+$yellow: #FFE300;
+$orange: #FF7800;
+$peach: #FFBC97;
+$brigth: #F7F7F7;
+
+@font-face{
+    font-family: Magiel-Black;
+    src: url('./../fonts/Magiel-Black.ttf'),
+         url('./../fonts/Magiel-Black.otf');}  
+.person{
+    justify-content: center;
+    .pod{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+.person_info{
+    writing-mode: vertical-rl;
+    text-orientation:sideways;
+    height: 200px;
+    .last_name{font-family: Magiel-Black;}
+    .first_name{color: $peach;}
+}
+#person_pod:hover{
+    .last_name{color: $orange;text-shadow: 2px 3px $brigth;}
+    .first_name{
+        margin: 0px;
+        color: $dark_brown;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+}
+.buttons{
+    .nag{
+        font-size: x-large;
+        text-align: left;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+.movies{
+    margin-top: 10px;
+    height: max-content;
+    .nag{
+        font-size: x-large;
+        text-align: left;
+    }
+}
+.scroll{
+    background-color: $peach;
+    border-radius: 10px;
+    margin: 10px;
+    @media (min-width: 1000px){
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+    }
+    @media (max-width: 1000px){
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 15px;
+    }
+    @media (min-width: 1000px){height: 250px;}
+    @media (max-width: 1000px){height: 100px;}
+    @media (max-width: 1000px){
+        .scroll_h{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 400px;
+    }}
+    .pod{
+        margin-right: 10px;
+        width: min-content;
+    }
+    img{
+        height: 200px;
+        @media (max-width: 1000px){display: none;}
+    }
+    .title{
+        font-size: medium;
+    }
+}
+.Persons{
+    @media (max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+.no_persons{
+    font-family: Magiel-Black;
+    font-size: 160%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('../../ducks/footer.jpeg');
+    color: transparent;
+    -webkit-text-stroke: 2px $brigth;
+    width: 80%;
+    text-align: center;
+    justify-self:center;
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
