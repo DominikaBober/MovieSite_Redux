@@ -1,5 +1,5 @@
 import './App.scss';
-import {Route, Switch, Link, useLocation} from 'react-router-dom';
+import {Route, Routes, Link, useLocation} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 
@@ -74,35 +74,35 @@ function App({movies, getMovies, persons, getPersons}) {
             </div>
             <div className="switch">
                 { movies.length>0 && persons.length>0 ? (
-                <Switch>
-                    <Route exact path="/">
-                        <Dashboard  resources={resources}/>
-                    </Route>
-                    <Route exact path="/movies">
-                        <Movies  resources={resources}/>
-                    </Route>
-                    <Route exact path="/persons">
-                        <Persons  resources={resources}/>
-                    </Route>
-                    <Route exact path="/add">
-                        <Forms  resources={resources}/>
-                    </Route>
-                    <Route exact path="/movie/:id">
-                        <Movie  resources={resources}/>
-                    </Route>
-                    <Route exact path="/movie/:id/edit">
-                        <MovieForm  resources={resources}/>
-                    </Route>
-                    <Route exact path="/person/:id">
-                        <Person  resources={resources}/>
-                    </Route>
-                    <Route exact path="/person/:id/edit">
-                        <PersonForm  resources={resources}/>
-                    </Route>
-                    <Route>
-                        <NoPage resources={resources}/>
-                    </Route>
-                </Switch>
+                <Routes>
+                    <Route exact path="/" element={
+                        <Dashboard  resources={resources}/>}
+                    />
+                    <Route exact path="/movies" element={
+                        <Movies  resources={resources}/>}
+                    />
+                    <Route exact path="/persons" element={
+                        <Persons  resources={resources}/>}
+                    />
+                    <Route exact path="/add" element={
+                        <Forms  resources={resources}/>}
+                    />
+                    <Route exact path="/movie/:id" element={
+                        <Movie  resources={resources}/>}
+                    />
+                    <Route exact path="/movie/:id/edit" element={
+                        <MovieForm  resources={resources}/>}
+                    />
+                    <Route exact path="/person/:id" element={
+                        <Person  resources={resources}/>}
+                    />
+                    <Route exact path="/person/:id/edit" element={
+                        <PersonForm  resources={resources}/>}
+                    />
+                    <Route element={
+                        <NoPage resources={resources}/>}
+                    />
+                </Routes>
                 ):(
                     <Error resources={resources}/>
                 )}

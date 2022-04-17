@@ -13,9 +13,8 @@ import { getMovies } from '../../ducks/Movies/selectors';
 import { getPersons } from '../../ducks/Persons/selectors';
 import { updatePerson } from '../../ducks/Persons/operations';
 import { addPerson } from '../../ducks/Persons/operations';
-import { checkConnetion } from '../../ducks/Persons/operations';
 
-function PersonForm ({resources, addPerson, updatePerson, checkConnetion, movies, persons}) {
+function PersonForm ({resources, addPerson, updatePerson, movies, persons}) {
 
     const {id: personID} = useParams();
     const [person, setPerson] = useState([]);
@@ -62,36 +61,33 @@ function PersonForm ({resources, addPerson, updatePerson, checkConnetion, movies
                 birth_date: values.birth_date,
                 image_url: values.image_url,
                 nationality: values.nationality};
-            const isConected = await checkConnetion();
-            if (isConected==="OK"){
-                await updatePerson(put_values);
-                setPopupContext(resources['Form']['thanks_update_person']);
-                setIsOpen(true);
-                setInitialvalues({
-                    first_name: put_values.first_name,
-                    last_name: put_values.last_name,
-                    birth_date: put_values.birth_date,
-                    image_url: put_values.image_url,
-                    nationality: put_values.nationality})
-            } else {
-                setPopupContext(resources['Error']['500']);
-                setIsOpen(true);
-            }
+            await updatePerson(put_values);
+            setPopupContext(resources['Form']['thanks_update_person']);
+            setIsOpen(true);
+            setInitialvalues({
+                first_name: put_values.first_name,
+                last_name: put_values.last_name,
+                birth_date: put_values.birth_date,
+                image_url: put_values.image_url,
+                nationality: put_values.nationality})
         }
         else{
-            const isConected = await checkConnetion();
-            if (isConected==="OK"){
-                await addPerson(values);
-                setPopupContext(resources['Form']['thanks_add_person']);
-                actions.resetForm({
-                    first_name: '',
-                    last_name: '',
-                    birth_date: '',
-                    image_url: '',
-                    nationality: ''});
-            } else {
-                setPopupContext(resources['Error']['500']);
-            }
+            const new_id = persons.sort(function(a, b){if(a.id < b.id) { return 1; } else return -1})[0].id + 1;
+            const put_values = {
+                id: new_id,
+                first_name: values.first_name,
+                last_name: values.last_name,
+                birth_date: values.birth_date,
+                image_url: values.image_url,
+                nationality: values.nationality};
+            await addPerson(put_values);
+            setPopupContext(resources['Form']['thanks_add_person']);
+            actions.resetForm({
+                first_name: '',
+                last_name: '',
+                birth_date: '',
+                image_url: '',
+                nationality: ''});
             setIsOpen(true);
         }
     }
@@ -167,8 +163,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = ({
     addPerson,
-    updatePerson,
-    checkConnetion
+    updatePerson
 });
 
 

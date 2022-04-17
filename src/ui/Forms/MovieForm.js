@@ -12,9 +12,8 @@ import { getMovies } from '../../ducks/Movies/selectors';
 import { getPersons } from '../../ducks/Persons/selectors';
 import { updateMovie} from '../../ducks/Movies/operations';
 import { addMovie} from '../../ducks/Movies/operations';
-import { checkConnetion } from '../../ducks/Movies/operations';
 
-function MovieForm({resources, addMovie, updateMovie, checkConnetion, movies, persons}) {
+function MovieForm({resources, addMovie, updateMovie, movies, persons}) {
 
     const {id: movieID} = useParams();
     const [movie, setMovie] = useState([]);
@@ -73,43 +72,45 @@ function MovieForm({resources, addMovie, updateMovie, checkConnetion, movies, pe
                     release_date: values.release_date,
                     description: values.description,
                     image_url: values.image_url
-                }
-            const isConected = await checkConnetion();
-            if (isConected==="OK"){
-                const isOk =  await  updateMovie(put_values);
-                if (isOk==="OK"){setPopupContext(resources['Form']['thanks_update_movie']);}
-                else{setPopupContext(resources['Form']['error']);}
-                setIsOpen(true);
-                setInitialvalues({
-                    title: put_values.title,
-                    genre: put_values.genre,
-                    release_date: put_values.release_date,
-                    description: put_values.description,
-                    image_url: put_values.image_url,
-                    director_id: put_values.director_id
-                })
-            } else {
-                setPopupContext(resources['Error']['500']);
-                setIsOpen(true);
             }
+            updateMovie(put_values);
+            setPopupContext(resources['Form']['thanks_update_movie']);
+            setIsOpen(true);
+            setInitialvalues({
+                title: put_values.title,
+                genre: put_values.genre,
+                release_date: put_values.release_date,
+                description: put_values.description,
+                image_url: put_values.image_url,
+                director_id: put_values.director_id
+            })
         }
         else{
-            const isConected = await checkConnetion();
-            if (isConected==="OK"){
-                const isOk =  await addMovie(values);
-                if (isOk==="OK"){
-                setPopupContext(resources['Form']['thanks_add_movie']);
-                actions.resetForm({
+            const new_id = movies.sort(function(a, b){if(a.id < b.id) { return 1; } else return -1})[0].id + 1;
+            const put_values = values.director_id !== "" ? {
+                id: new_id,
+                title: values.title,
+                genre: values.genre,
+                release_date: values.release_date,
+                description: values.description,
+                image_url: values.image_url,
+                director_id: values.director_id} : {
+                    id: new_id,
+                    title: values.title,
+                    genre: values.genre,
+                    release_date: values.release_date,
+                    description: values.description,
+                    image_url: values.image_url
+            }
+            await addMovie(put_values);
+            setPopupContext(resources['Form']['thanks_add_movie']);
+            actions.resetForm({
                     title: '',
                     genre: '',
                     release_date: '',
                     description: '',
                     image_url: '',
-                    director_id: ''});}
-                else{setPopupContext(resources['Form']['error']);}
-            } else {
-                setPopupContext(resources['Error']['500']);
-            }
+                    director_id: ''});
             setIsOpen(true);
         }
     }
@@ -203,7 +204,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     addMovie,
     updateMovie,
-    checkConnetion
+    // checkConnetion
 }
   
 export default connect(mapStateToProps, mapDispatchToProps)(MovieForm);

@@ -1,16 +1,16 @@
 import './Movies.scss';
 import { useState, useEffect } from "react";
-import { useParams, Link } from 'react-router-dom';
-import { connect } from 'react-redux'
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Popup from '../popup';
 import NoPage from '../no_page';
 
 import { getMovies } from '../../ducks/Movies/selectors';
 import { getPersons } from '../../ducks/Persons/selectors';
-import { deleteMovie, checkConnetion } from '../../ducks/Movies/operations';
+import { deleteMovie } from '../../ducks/Movies/operations';
 
- function Movie({resources, movies, persons, deleteMovie, checkConnetion}) {
+ function Movie({resources, movies, persons, deleteMovie}) {
     
     const {id: movieID} = useParams();
     const [movie, setMovie] = useState(movies.filter(movie => movie.id === parseInt(movieID)));
@@ -19,6 +19,7 @@ import { deleteMovie, checkConnetion } from '../../ducks/Movies/operations';
     const [isOpen, setIsOpen] = useState(false);
     const [popupContext, setPopupContext] = useState("");
     const [HandleClose, setHandleClose] = useState(() => () => setIsOpen(false));
+    const navigate = useNavigate();
 
     useEffect(() => {
         if(movies.length > 0){
@@ -31,8 +32,8 @@ import { deleteMovie, checkConnetion } from '../../ducks/Movies/operations';
     }, [movies, persons])
 
     const handleDelete = () => {
-        deleteMovie(movieID);
-        window.location.replace('/movies');
+        deleteMovie(parseInt(movieID));
+        navigate('/movies');
     }
 
     return (
@@ -59,14 +60,8 @@ import { deleteMovie, checkConnetion } from '../../ducks/Movies/operations';
                         <div id="grid" className="buttons">
                             <Link className="nag" to={`/movie/${movieID}/edit`}>{ resources['Form']['edit']}</Link>
                             <button className="nag" onClick={async () => {
-                                const isConected = await checkConnetion();
-                                if (isConected==="OK"){
-                                    setPopupContext(resources["Movies"]["delete_movie"]);
-                                    setHandleClose(() => () => handleDelete())
-                                } else {
-                                    setPopupContext(resources['Error']['500']);
-                                    setHandleClose(() => () => setIsOpen(false));
-                                }
+                                setPopupContext(resources["Movies"]["delete_movie"]);
+                                setHandleClose(() => () => handleDelete());
                                 setIsOpen(true)
                             }}>  {resources['Persons']['delete']}</button>
                         </div>
@@ -92,7 +87,6 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = {
     deleteMovie,
-    checkConnetion
 }
   
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);

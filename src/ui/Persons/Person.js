@@ -1,18 +1,17 @@
 import './Persons.scss';
 import { useEffect, useState } from "react";
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux'
-import HorizontalScroll from "react-scroll-horizontal";
 
 import Popup from '../popup';
 import NoPage from '../no_page';
 
 import { getMovies } from '../../ducks/Movies/selectors';
 import { getPersons } from '../../ducks/Persons/selectors';
-import { checkConnetion, deletePerson } from '../../ducks/Persons/operations';
+import { deletePerson } from '../../ducks/Persons/operations';
 import { updateMovie } from '../../ducks/Movies/operations';
 
-const Person = ({resources, movies, persons, deletePerson, updateMovie, checkConnetion}) => {
+const Person = ({resources, movies, persons, deletePerson, updateMovie}) => {
 
     const {id: personID} = useParams();
     const [person, setPerson] = useState(persons.filter(person => person.id === parseInt(personID)));
@@ -22,6 +21,7 @@ const Person = ({resources, movies, persons, deletePerson, updateMovie, checkCon
     const [isOpen, setIsOpen] = useState(false);
     const [popupContext, setPopupContext] = useState("");
     const [HandleClose, setHandleClose] = useState(() => () => setIsOpen(false));
+    const navigate = useNavigate();
 
     useEffect(() => {
         if(movies.length > 0){
@@ -44,8 +44,8 @@ const Person = ({resources, movies, persons, deletePerson, updateMovie, checkCon
                 image_url: movie.image_url
             })
         });
-        deletePerson(personID);
-        window.location.replace('/persons');
+        deletePerson(parseInt(personID));
+        navigate('/persons');
     }
 
     return (
@@ -68,14 +68,8 @@ const Person = ({resources, movies, persons, deletePerson, updateMovie, checkCon
                         <div id="grid" className="buttons">
                             <Link className="nag" to={`/person/${personID}/edit`}>{ resources['Form']['edit']}</Link>
                             <button className="nag" onClick={async () => {
-                                const isConected = await checkConnetion();
-                                if (isConected==="OK"){
-                                    setPopupContext(resources["Persons"]["delete_person"]);
-                                    setHandleClose(() => () => handleDelete())
-                                } else {
-                                    setPopupContext(resources['Error']['500']);
-                                    setHandleClose(() => () => setIsOpen(false));
-                                }
+                                setPopupContext(resources["Persons"]["delete_person"]);
+                                setHandleClose(() => () => handleDelete())
                                 setIsOpen(true)
                             }}>  {resources['Persons']['delete']}</button>
                         </div>
@@ -86,14 +80,14 @@ const Person = ({resources, movies, persons, deletePerson, updateMovie, checkCon
                             { showDirectedMovies &&
                             <div className="scroll">
                             { directedMovies.length > 3 ? (
-                                <HorizontalScroll pageLock={true} reverseScroll={true} className="scroll_h">
+                                <div className="scroll_h">
                                     {directedMovies.map(movie => (
                                         <Link to={`/movie/${movie.id}`} className="pod" id="col" key={`${movie.id}`}>
                                             <img src={movie.image_url} alt={movie.title} />
                                             <div className="title">{movie.title}</div>
                                         </Link>
                                     ))}
-                                </HorizontalScroll>
+                                </div>
                             ):(
                                 directedMovies.map(movie => (
                                     <Link to={`/movie/${movie.id}`} className="pod" id="col" key={`${movie.id}`}>
@@ -125,8 +119,7 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = {
     deletePerson,
-    updateMovie,
-    checkConnetion
+    updateMovie
 }
   
 export default connect(mapStateToProps, mapDispatchToProps)(Person);
